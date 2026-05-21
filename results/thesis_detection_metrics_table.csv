@@ -1,0 +1,7 @@
+metric,value
+Known Malicious Users,34.0
+Extreme Deviation Flagged Users,19.0
+CUSUM Flagged Users,34.0
+Total Combined Flagged Users,34.0
+Detection Rate,1.0
+False Positive Rate,0.0

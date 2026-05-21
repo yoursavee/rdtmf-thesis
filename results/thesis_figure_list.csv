@@ -1,0 +1,6 @@
+Figure File,Suggested Thesis Caption
+figure_final_evaluation_metrics.png,Final evaluation metrics of the implemented RDTMF prototype.
+figure_detection_performance.png,Detection performance under controlled 10% synthetic attack injection.
+figure_trust_score_comparison.png,"Comparison of direct trust, indirect trust and final aggregated trust for sample services."
+figure_top_n_recommendations.png,Top N trusted services generated for the sample target user.
+figure_access_decision_summary.png,Final access decision summary after RBAC policy enforcement.

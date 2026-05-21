@@ -1,0 +1,9 @@
+RDTMF Stage,Main Output File,Status
+Data Preprocessing,"data/rt_clean.csv, data/rt_malicious.csv",Completed
+Direct Trust Computation,results/direct_trust_user_0_sample.csv,Completed
+Indirect Trust Diffusion,results/indirect_trust_user_0_sample.csv,Completed
+Weighted Trust Aggregation,results/final_trust_user_0_sample.csv,Completed
+Anomaly Detection,"results/flagged_users.csv, results/detection_metrics.csv",Completed
+Top N Recommendation,results/top_n_recommendations_user_0.csv,Completed
+RBAC Access Decision,results/access_decisions_user_0.csv,Completed
+Final Evaluation,results/final_evaluation_metrics.csv,Completed
