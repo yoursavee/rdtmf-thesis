@@ -1,0 +1,4 @@
+attack_rate,attack_percentage,total_users,known_malicious_users,extreme_deviation_flagged_users,cusum_flagged_users,total_combined_flagged_users,detection_rate,false_positive_rate
+0.1,10,339,34,19,34,34,1.0,0.0
+0.2,20,339,68,39,68,68,1.0,0.0
+0.3,30,339,102,56,102,102,1.0,0.0
