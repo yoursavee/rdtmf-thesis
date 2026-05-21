@@ -1,0 +1,30 @@
+
+7. Initial Findings
+
+7.1 Framework Architecture Design
+
+The initial implementation of the Recommendation-Driven Trust Management Framework (RDTMF) confirms that the proposed conceptual architecture can be translated into a working Python-based prototype. The implemented workflow follows the five main layers defined in the research design: data preprocessing, direct and indirect trust computation, weighted trust aggregation, anomaly detection, trust-based recommendation, and final RBAC-based access decision. The output files produced by the prototype demonstrate that each layer generates a traceable result that can be inspected independently.
+
+The preprocessing layer successfully loaded the WS-DREAM response-time matrix, replaced missing values, transformed response time into a normalised quality score, and generated both clean and malicious experimental datasets. The direct trust module implemented rating-based collaborative filtering using Pearson Correlation Coefficient, Cosine Similarity, Angle of Inclination filtering and Top K neighbour selection. The indirect trust module implemented BFS-based trust diffusion with depth decay. These two trust values were combined through weighted aggregation to generate final trust scores for service ranking.
+
+7.2 Algorithm Specification
+
+The implementation confirms that the four main algorithmic components of the RDTMF can be executed as reusable Python modules. The direct trust module computes DT(u, s) using co-rated users and similarity-weighted neighbour ratings. The indirect trust module computes IT(u, s) through a similarity-based user graph and BFS traversal. The aggregation module combines both trust values using alpha = 0.6 and beta = 0.4. The anomaly detection module applies deviation-based and CUSUM-based checks to identify malicious users before recommendation and access-control decisions are made.
+
+The implementation also confirms that the final output of the workflow matches the algorithmic target of the thesis. The system produced a flagged-user list, Top N trusted service recommendations and final access decision outputs. This supports the end-to-end logic of the proposed framework because trust computation, malicious-user filtering, recommendation and access control are connected in one experimental pipeline.
+
+7.3 Preliminary Dataset and Implementation Results
+
+The corrected response-time quality matrix contains 339 users and 5825 services. The preprocessing stage converted response time into a quality score so that lower response time represents better service quality. A controlled 10 percent synthetic malicious-user injection was then applied to evaluate the detection layer. In this experiment, 34 malicious users were injected and 34 users were flagged by the combined detection process.
+
+The anomaly detection results show that the controlled experiment achieved a detection rate of 1.0000 and a false positive rate of 0.0000. This means that the detection module identified all injected malicious users under the selected parameter setting and did not incorrectly flag legitimate users in this controlled test. However, this result should be interpreted as an outcome of the synthetic attack setting rather than proof of real-world deployment performance.
+
+The final trust-based recommendation stage produced 5 trusted service recommendations for the sample target user. The highest final trust score among the recommended services was 0.9852, while the lowest recommended final trust score was 0.9827. Since all recommended services were above the trust threshold of 0.60, the Top N recommendation output is consistent with the trust-filtering rule used in the framework.
+
+7.4 Final Evaluation Results
+
+The final evaluation metrics show that the implemented prototype can generate measurable outputs for prediction accuracy, recommendation quality, detection performance and access-control consistency. The Mean Absolute Error was 0.0616, while the Root Mean Square Error was 0.0863. The coverage value was 1.0000, indicating the proportion of evaluated user-service pairs for which final trust predictions were produced. The Precision@N value was 1.0000, and the Recall@N value was 0.2500. These results provide an initial measurable basis for evaluating the recommendation quality of the RDTMF prototype.
+
+The access-control stage also produced final grant or deny decisions using the RBAC policy simulation. The access decision consistency value was 1.0000, showing that the access-control module generated valid access decisions for the evaluated recommendation outputs. This confirms that the framework does not treat a trusted recommendation as automatic permission. Instead, the recommended service must still satisfy the RBAC policy before access is granted.
+
+Overall, the initial findings show that the implemented RDTMF prototype can complete the full workflow from preprocessing to final access decision. The results support the practical feasibility of the proposed framework and provide a foundation for larger experiments using more users, more services and additional attack rates such as 20 percent and 30 percent malicious-user injection.
