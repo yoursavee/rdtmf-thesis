@@ -1,0 +1,6 @@
+user_id,service_id,user_role,final_trust_score,access_decision,reason
+0,19,registered_user,0.9851940256326353,Access Denied,Role-policy mismatch
+0,3,registered_user,0.9843859687517816,Access Granted,Trusted recommendation and valid RBAC permission
+0,4,registered_user,0.9843187094609864,Access Granted,Trusted recommendation and valid RBAC permission
+0,1,registered_user,0.983995262693138,Access Granted,Trusted recommendation and valid RBAC permission
+0,2,registered_user,0.982690305626343,Access Granted,Trusted recommendation and valid RBAC permission
