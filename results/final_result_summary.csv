@@ -1,0 +1,8 @@
+Result Area,Output,Interpretation
+Data Preprocessing,rt_clean.csv and rt_malicious.csv created,"WS-DREAM response-time data cleaned, transformed to quality score, and malicious users injected."
+Direct Trust,direct_trust_user_0_sample.csv,"PCC, Cosine Similarity, AOI filtering, and Top K neighbour selection were implemented."
+Indirect Trust,indirect_trust_user_0_sample.csv,BFS-based trust diffusion with depth decay was implemented.
+Weighted Aggregation,final_trust_user_0_sample.csv,Direct and indirect trust were combined using alpha = 0.6 and beta = 0.4.
+Anomaly Detection,flagged_users.csv and detection_metrics.csv,Injected malicious users were detected using deviation and CUSUM-based checks.
+Top N Recommendation,top_n_recommendations_user_0.csv,Top trusted services above the 0.60 trust threshold were recommended.
+RBAC Access Decision,access_decisions_user_0.csv,Recommended services were checked against RBAC policy before access was granted or denied.

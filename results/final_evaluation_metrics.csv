@@ -1,0 +1,9 @@
+Metric,Value
+MAE,0.06156833638251417
+RMSE,0.0862612509786434
+Coverage,1.0
+Precision@N,1.0
+Recall@N,0.25
+Detection Rate,1.0
+False Positive Rate,0.0
+Access Decision Consistency,1.0
